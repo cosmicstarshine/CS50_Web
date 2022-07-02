@@ -9,7 +9,7 @@
 <body>
     <nav>
         <!-- left navbar -->
-        <a href = "index.html">Back</a>
+        <a href = "index.html">Home</a>
         <a href = "bio.html">About</a>        
     </nav>
     <nav>
@@ -20,7 +20,85 @@
         <!-- image graphic here to link to my github. -->
     </nav>
     <!-- Implement this after studying google homepage. -->
-    <form action = "https://www.google.com/advanced_search" method = "GET" role = "search" name = "f">
+    <form action = "https://www.google.com/search" method = "GET" role = "search" name = "f">
+        <!-- Use two divs: one for the text on the left, 
+            One for the input fields on the right. -->
+            <!-- Also: one div for the Search Query, one for the narrowing. -->
+        <p>Find Pages with...</p>
+        <!-- All these words: (basic advanced query search) -->        
+        <p>All of these words:</p><input type = "text" name = "as_q">
+        <!-- This exact word/phrase: (exact phrase query) -->
+        <p>This exact word/phrase:</p><input type = "text" name = "as_epq">
+        <!-- Any of these words: (or query) -->
+        <p>Any of these words:</p><input type = "text" name = "as_oq">
+        <!-- None of these words: (exclusion query) -->
+        <p>None of these words:</p><input type = "text" name = "as_eq">
+        <!-- Numbers ranging from:  -->
+        <p>Numbers Ranging From:</p>
+        <input type = "text" name = "as_nlo"><p>to</p><input type = "text" name = "as_nhi">
+
+        <!-- Return to this later: This is just tedious input work && not required. >  -->
+        <!-- Second div for narrowing: -->
+        <!-- <p>Then narrow your results by...</p> -->
+        <!--Language Region-->
+        <!-- language: -->
+        <!-- <select name = "lr">
+            <option value role = "menuitem">any language</option>
+            <option value = "lang_af" role = "menuitem">Afrikaans</option>
+            <option value = "lang_ar" role = "menuitem">Arabic</option>
+            <option value = "lang_hy" role = "menuitem">Armenian</option>
+            <option value = "lang_be" role = "menuitem">Belarusian</option>
+            <option value = "lang_bg" role = "menuitem">Bulgarian</option>
+            <option value = "lang_ca" role = "menuitem">Catalan</option>
+            <option value = "lang_zh-CN" role = "menuitem">Chinese (Simplified)</option>
+            <option value = "lang_zh-TW" role = "menuitem">Chinese (Traditional)</option>
+            <option value = "lang_hr" role = "menuitem">Croatian</option>
+            <option value = "lang_cs" role = "menuitem">Czech</option>
+            <option value = "lang_da" role = "menuitem">Danish</option>
+            <option value = "lang_nl" role = "menuitem">Dutch</option>
+            <option value = "lang_en" role = "menuitem">English</option>
+            <option value = "lang_eo" role = "menuitem">Esperanto</option>
+            <option value = "lang_et" role = "menuitem">Estonian</option>
+            <option value = "lang_tl" role = "menuitem">Filipino</option>
+            <option value = "lang_fi" role = "menuitem">Finnish</option>
+            <option value = "lang_fr" role = "menuitem">French</option>
+            <option value = "lang_de" role = "menuitem">German</option>
+            <option value = "lang_el" role = "menuitem">Greek</option>
+            <option value = "lang_iw" role = "menuitem">Hebrew</option>
+            <option value = "lang_hi" role = "menuitem">Hindi</option>
+            <option value = "lang_hu" role = "menuitem">Hungarian</option>
+            <option value = "lang_is" role = "menuitem">Icelandic</option>
+            <option value = "lang_id" role = "menuitem">Indonesian</option>
+            <option value = "lang_it" role = "menuitem">Italian</option>
+            <option value = "lang_ja" role = "menuitem">Japanese</option>
+            <option value = "lang_ko" role = "menuitem">Korean</option>
+            <option value = "lang_lv" role = "menuitem">Latvian</option>
+            <option value = "lang_lt" role = "menuitem">Lithuanian</option>
+            <option value = "lang_no" role = "menuitem">Norwegian</option>
+            <option value = "lang_fa" role = "menuitem">Persian</option>
+            <option value = "lang_pl" role = "menuitem">Polish</option>
+            <option value = "lang_pt" role = "menuitem">Portuguese</option>
+            <option value = "lang_ro" role = "menuitem">Romanian</option>
+            <option value = "lang_ru" role = "menuitem">Russian</option>
+            <option value = "lang_sr" role = "menuitem">Serbian</option>
+            <option value = "lang_sk" role = "menuitem">Slovak</option>
+            <option value = "lang_sl" role = "menuitem">Slovenian</option>
+            <option value = "lang_es" role = "menuitem">Spanish</option>
+            <option value = "lang_sw" role = "menuitem">Swahili</option>
+            <option value = "lang_sv" role = "menuitem">Swedish</option>
+            <option value = "lang_th" role = "menuitem">Thai</option>
+            <option value = "lang_tr" role = "menuitem">Turkish</option>
+            <option value = "lang_uk" role = "menuitem">Ukranian</option>
+            <option value = "lang_vi" role = "menuitem">Vietnamese</option>
+        </select> -->
+        <!-- region: 
+        <select name = "cr">
+            <option value role = "menuitem">any region</option>
+            <option value = "countryAF" role = "menuitem">Afghanistan</option>
+            <option value = "countryAL" role = "menuitem">Albania</option>
+        </select> -->
+
+        <input type = "submit" role = "button" value = "Advanced Search">
        
     </form>
 </body>
