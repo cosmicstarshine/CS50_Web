@@ -5,37 +5,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bootleg Google: Advanced Search</title>
+    <link rel = "stylesheet" href = "main.css">
 </head>
 <body>
-    <nav>
-        <!-- left navbar -->
-        <a href = "index.html">Home</a>
-        <a href = "bio.html">About</a>        
-    </nav>
-    <nav>
-        <!-- rightNavbar -->
-        <a href = "imageSearch.html">Images</a>
-        <a href = "#">Advanced</a>
-        <!-- google waffle here -->
-        <!-- image graphic here to link to my github. -->
-    </nav>
+    <div class = "navigation">
+        <nav class = "navigation leftNav">
+            <!-- left navbar -->
+            <a href = "index.html">Home</a>
+            <a href = "bio.html">About</a>        
+        </nav>
+        <nav class = "navigation rightNav">
+            <!-- rightNavbar -->
+            <a href = "imageSearch.html">Images</a>
+            <a href = "#">Advanced</a>
+            <!-- google waffle here -->
+            <!-- image graphic here to link to my github. -->
+        </nav>
+    </div>
+    <h1>Advanced Search</h1>
     <!-- Implement this after studying google homepage. -->
     <form action = "https://www.google.com/search" method = "GET" role = "search" name = "f">
-        <!-- Use two divs: one for the text on the left, 
-            One for the input fields on the right. -->
-            <!-- Also: one div for the Search Query, one for the narrowing. -->
-        <p>Find Pages with...</p>
+        <h2>Find Pages with...</h2>
+        <!-- Figure out what the heck to do with CSS Grid.
+        Or maybe use flexBox -->
+        <div class = "leftColumn">
+            <p>All of these words:</p>
+            <p>This exact word/phrase:</p>
+            <p>Any of these words:</p>
+            <p>None of these words:</p>
+            <p>Numbers Ranging From:</p>
+        </div>
+        <div class = "rightColumn">
+            <input type = "text" name = "as_q">
+            <input type = "text" name = "as_epq">
+            <input type = "text" name = "as_oq">
+            <input type = "text" name = "as_eq">
+            <input type = "text" name = "as_nlo"><p>to</p><input type = "text" name = "as_nhi">
+        </div>
         <!-- All these words: (basic advanced query search) -->        
-        <p>All of these words:</p><input type = "text" name = "as_q">
         <!-- This exact word/phrase: (exact phrase query) -->
-        <p>This exact word/phrase:</p><input type = "text" name = "as_epq">
         <!-- Any of these words: (or query) -->
-        <p>Any of these words:</p><input type = "text" name = "as_oq">
         <!-- None of these words: (exclusion query) -->
-        <p>None of these words:</p><input type = "text" name = "as_eq">
         <!-- Numbers ranging from:  -->
-        <p>Numbers Ranging From:</p>
-        <input type = "text" name = "as_nlo"><p>to</p><input type = "text" name = "as_nhi">
+        
 
         <!-- Return to this later: This is just tedious input work && not required. >  -->
         <!-- Second div for narrowing: -->
