@@ -22,25 +22,63 @@
             <!-- image graphic here to link to my github. -->
         </nav>
     </div>
-    <h1>Advanced Search</h1>
+    <!-- Currently not in love with all of this.
+        -Add a placeholder for the graphic.
+        -Move Advanced Search out of the grid.
+        -Add a span below that, format with the border line.
+        -Rethink grid:
+        -Go with three container divs > Hide 3rd one with media query.
+        -First: Text descr, Second: Field, Third, Instructions.
+        -Use a span to get the fields to be in the right spot.
+
+        --OR: Div text, div field, div desc.
+        --Flexbox it? Some sort of responsive thing.
+        -->
     <!-- Implement this after studying google homepage. -->
+    <header class = "main-header">
+        <!-- Design, add to project. -->
+        <h1>PLACEHOLDER</h1>
+        <svg focuasable = "false" viewBox = "0 0 24 24">
+        </svg>
+    </header>
+    <h1 class = "header">Advanced Search</h1>
+    <div class = "break-line"></div>
+    
     <form action = "https://www.google.com/search" method = "GET" role = "search" name = "f">
-        <h2>Find Pages with...</h2>
-        <!-- Figure out what the heck to do with CSS Grid.
-        Or maybe use flexBox -->
-        <div class = "leftColumn">
-            <p>All of these words:</p>
-            <p>This exact word/phrase:</p>
-            <p>Any of these words:</p>
-            <p>None of these words:</p>
-            <p>Numbers Ranging From:</p>
-        </div>
-        <div class = "rightColumn">
-            <input type = "text" name = "as_q">
-            <input type = "text" name = "as_epq">
-            <input type = "text" name = "as_oq">
-            <input type = "text" name = "as_eq">
-            <input type = "text" name = "as_nlo"><p>to</p><input type = "text" name = "as_nhi">
+        <div class = "container"> 
+            <h2 class = grid-header>Find Pages with...</h2>
+       
+            <div class = "left-column column">
+                <p class = "field">All of these words:</p>
+                <p class = "field">This exact word/phrase:</p>
+                <p class = "field">Any of these words:</p>
+                <p class = "field">None of these words:</p>
+                <p class = "field">Numbers Ranging From:</p>
+
+            </div>
+            <div class = "middle-column column">
+                <input class = "large-field field" type = "text" name = "as_q">
+                <input class = "large-field field" type = "text" name = "as_epq">
+                <input class = "large-field field" type = "text" name = "as_oq">
+                <input class ="large-field field"type = "text" name = "as_eq">
+                <div class = "number-range">
+                    <input class = "field" type = "text" name = "as_nlo">
+                    <p>to</p>
+                    <input class = "field" type = "text" name = "as_nhi">
+                </div>
+
+            </div>
+            <h3 class = "grid-subheader hideable">To do this in the search box</h3>
+
+            <!-- Use a media query to hide this. -->
+            <div class = "right-column column hideable">
+                <p class = "field context-field">Type the important words: <span>tri-colour rat terrier</span></p>
+                <p class = "field context-field">Put exact words in quotes: <span>"rat terrier"</span></p>
+                <p class = "field context-field">Type <span>OR</span> between all the words you want <span>miniature OR standard</span></p>
+                <p class = "field context-field">Put a minus sign just before words that you don't want <span>-rodent, -"Jack Russell"</span></p>
+                <p class = "field context-field">Put two full stops between the numbers and add a unit of measurement <span>10..35 kg, $300..$500, 2010..2011</span></p>
+            </div>
+            <input class = "footer button" type = "submit" role = "button" value = "Advanced Search">
         </div>
         <!-- All these words: (basic advanced query search) -->        
         <!-- This exact word/phrase: (exact phrase query) -->
@@ -108,10 +146,7 @@
             <option value role = "menuitem">any region</option>
             <option value = "countryAF" role = "menuitem">Afghanistan</option>
             <option value = "countryAL" role = "menuitem">Albania</option>
-        </select> -->
-
-        <input type = "submit" role = "button" value = "Advanced Search">
-       
+        </select> -->       
     </form>
 </body>
 </html>

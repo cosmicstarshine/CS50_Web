@@ -1,5 +1,11 @@
 
-/* Need some sort of global font, lol. */
+/* Consider breaking this up into multiple CSS.
+Move the advanced-search to its own CSS. 
+Same for other CSS. This should just be for global styling.*/
+
+/* Margin: top/right/bottom/left */
+
+/* Need some sort of global font... */
 .navigation {
     /* Change here as needed */
     font-size: 1rem;
@@ -26,4 +32,142 @@
 .navigation a {
     padding: 0.5rem;
     text-decoration: none;
+}
+
+.container{
+    display: grid;
+
+    /* Change from 2 @ 50 to 25% and fr. 
+    Also: add a third column for explanation shit.*/
+    grid-template-columns: [col1-start]25%[col1-end col2-start] 50%[col2-end col3-start] 1fr[col3-end];
+    grid-template-rows: auto;
+    grid-template-areas:
+        "h . sh"
+        "l m r"
+        ". f .";    
+}
+
+.header{
+    background-color: pink;
+    margin-left: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-kerning: normal;
+    letter-spacing:-0.5px;    
+
+    
+    
+}
+.break-line{
+    border-bottom: solid 1px black;
+}
+.grid-header{
+    grid-area:h;
+    margin: 2rem 0 0.5rem 2rem;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:1.5rem;
+    font-kerning: normal;
+    letter-spacing:-0.5px;    
+    
+
+
+}
+.grid-subheader{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:0.9rem;
+    grid-area: sh;
+    margin: 2.5rem 2rem 0.5rem 2rem;
+    font-kerning: normal;  
+    letter-spacing:-0.5px;    
+  
+
+
+}
+
+/* Figure out some design language for h2 & 3? */
+.column{
+    display:grid;
+    grid-template-rows:repeat(4vh, 5, row-start);
+    column-span: all;
+    align-self: stretch;
+    /* Consider, if a global font, to just pass here and inherit. */
+}
+.left-column{
+    grid-area: l;
+    margin: 0 1rem 0 2rem;
+    
+    
+}
+.middle-column{
+    grid-area: m;
+}
+
+.right-column{
+    grid-area: r;
+    margin: 0 1rem 0 2rem;
+
+}
+.number-range{
+    display:grid;
+    grid-template-columns: 2fr 1fr 2fr;
+}
+.number-range p{
+    place-self:center;
+    font-family: Arial, Arial, Helvetica, sans-serif;
+    font-size: 0.9rem;
+}
+
+.field{
+    height: 4vh;
+    width: 100%;
+    place-self:end;
+    align-self:stretch;
+    margin:1rem 0 1rem 0;
+    font-size: 0.9rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.footer{
+    grid-area: f;
+    height: 2.5rem;
+    width: 10rem;
+    place-self: end;
+    background-color: lightblue;
+    border:none;
+    border-radius: 0.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9rem;
+    font-weight:bold;
+    
+       
+}
+
+
+/* CHANGE THIS FONT. */
+.context-field{
+    font-size: 0.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.context-field span{
+    font-size: 0.9rem;
+    font-family:monospace;
+}
+
+
+
+
+.main-header{
+    width: auto;
+    height: 12vh;
+    background-color: green;
+}
+
+@media only screen and (max-width: 1200px){
+    .hideable{
+        display:none;
+    }
+@media only screen and (max-width: 600px){
+    .field{
+        font-size:0.8rem;
+    }
+}
 }
