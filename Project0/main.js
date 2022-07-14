@@ -9,7 +9,12 @@ var storedPref = localStorage['darkMode'];
 var darkMode;
 
 if(null !== storedPref){
-    darkMode = JSON.parse(storedPref);
+    try {
+        darkMode = JSON.parse(storedPref);        
+    } catch (error) {
+        darkMode = window.matchMedia("(prefers-color-scheme:dark)").matches;
+    }
+    
 
 }else{
     darkMode = window.matchMedia("(prefers-color-scheme:dark)").matches;

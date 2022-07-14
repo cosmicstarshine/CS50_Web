@@ -73,6 +73,7 @@ body{
 .button:hover{
     background-color:#B97A95;
     color:#F2E1C1;
+    cursor: pointer;
 }
 .search-form{
     width: 50%;
