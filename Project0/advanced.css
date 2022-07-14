@@ -1,8 +1,5 @@
 .container{
     display: grid;
-
-    /* Change from 2 @ 50 to 25% and fr. 
-    Also: add a third column for explanation shit.*/
     grid-template-columns: [col1-start]1fr[col1-end col2-start]4fr[col2-end col3-start]1fr[col3-end];
     grid-template-rows: auto;
     grid-template-areas:
@@ -46,14 +43,11 @@
 
 }
 
-/* Figure out some design language for h2 & 3? */
 .column{
     display:grid;
     grid-template-rows:repeat(4vh, 5, row-start);
     place-self:left;
     
-    
-    /* Consider, if a global font, to just pass here and inherit. */
 }
 .left-column{
     grid-area: l;
@@ -113,7 +107,6 @@
 
 
 
-/* CHANGE THIS FONT. */
 .context-field{
     font-size: 0.8rem;
     font-weight:100;
@@ -122,9 +115,6 @@
     font-size: 0.9rem;
     font-family:monospace;
 }
-
-
-
 
 .main-header{
     width: auto;

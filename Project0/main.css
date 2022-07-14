@@ -5,6 +5,7 @@ Same for other CSS. This should just be for global styling.*/
 .page-container{
     position:relative;
     min-height: 100vh;
+    min-width: 100vw;
 }
 .content-wrapper{
     padding-bottom: 8rem;
@@ -36,7 +37,7 @@ body{
     font-size: 1.1rem;
     display: flex;
     flex-wrap: nowrap;
-    justify-content: space-between;
+    justify-content: space-between;    
     margin: 0.5rem; 
     
 }
@@ -193,43 +194,19 @@ a:hover{
     border-bottom: solid 3px #716F81;
 }
 
+@media only screen and (max-width: 400px){
+    .text-logo{
+        font-size:300%;
+    }
+    .bottom-block{        
+        height: auto;
+    }
+    .content-wrapper{
+        padding-bottom:12rem;
+    }
+}
 
-/* @media (prefers-color-scheme: dark){
-    body {
-        background-color: #1B2430;
-        color:#D6D5A8;
-    }
-    .text-logo h2, h3{
-        color: #51557E;
-    }
-    .button{
-        background-color: #51557E;
-        color: #D6D5A8;
-    }
-    .button:hover{
-        background-color: #D6D5A8;
-        color: #816797;
-    }
-    .search-field {
-        background-color: #1B2430;
-        border: solid 1px #816797;
-    }
-    .search-field svg path{
-        fill: #816797;
-        stroke: #816797;
-    }
-    .search-field input{
-        background-color: #1B2430;
-        color: #D6D5A8;
-    }
-    a {
-        color: #816797;
-    }
-    a:hover{
-        color: #D6D5A8;
-    }
-} */
-/* Dark Mode Test */
+/* Dark Mode */
 .dark{
     background-color: #1B2430;
     color:#D6D5A8;
