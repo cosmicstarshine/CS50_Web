@@ -194,7 +194,7 @@ a:hover{
     border-bottom: solid 3px #716F81;
 }
 
-@media only screen and (max-width: 400px){
+@media only screen and (max-width: 500px){
     .text-logo{
         font-size:300%;
     }
