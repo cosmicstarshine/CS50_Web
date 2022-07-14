@@ -6,86 +6,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bootleg Google: Advanced Search</title>
     <link rel = "stylesheet" href = "main.css">
+    <link rel = "stylesheet" href = "advanced.css">
 </head>
-<body>
-    <div class = "navigation">
-        <nav class = "navigation leftNav">
-            <!-- left navbar -->
-            <a href = "index.html">Home</a>
-            <a href = "bio.html">About</a>        
-        </nav>
-        <nav class = "navigation rightNav">
-            <!-- rightNavbar -->
-            <a href = "imageSearch.html">Images</a>
-            <a href = "#">Advanced</a>
-            <!-- google waffle here -->
-            <!-- image graphic here to link to my github. -->
-        </nav>
-    </div>
-    <!-- Currently not in love with all of this.
-        -Add a placeholder for the graphic.
-        -Move Advanced Search out of the grid.
-        -Add a span below that, format with the border line.
-        -Rethink grid:
-        -Go with three container divs > Hide 3rd one with media query.
-        -First: Text descr, Second: Field, Third, Instructions.
-        -Use a span to get the fields to be in the right spot.
-
-        --OR: Div text, div field, div desc.
-        --Flexbox it? Some sort of responsive thing.
-        -->
-    <!-- Implement this after studying google homepage. -->
-    <header class = "main-header">
-        <!-- Design, add to project. -->
-        <h1>PLACEHOLDER</h1>
-        <svg focuasable = "false" viewBox = "0 0 24 24">
-        </svg>
-    </header>
-    <h1 class = "header">Advanced Search</h1>
-    <div class = "break-line"></div>
-    
-    <form action = "https://www.google.com/search" method = "GET" role = "search" name = "f">
-        <div class = "container"> 
-            <h2 class = grid-header>Find Pages with...</h2>
-       
-            <div class = "left-column column">
-                <p class = "field">All of these words:</p>
-                <p class = "field">This exact word/phrase:</p>
-                <p class = "field">Any of these words:</p>
-                <p class = "field">None of these words:</p>
-                <p class = "field">Numbers Ranging From:</p>
-
+<body id = "mainBody">
+    <div class = "page-container">
+        <div class = "content-wrapper">
+            <div class = "navigation">
+                <nav class = "navigation left-nav">
+                    <!-- left navbar -->
+                    <a class = "text-nav" href = "index.html">Home</a>
+                    <a class = "text-nav" href = "bio.html">About</a>        
+                </nav>
+                <nav class = "navigation right-nav">
+                    <!-- rightNavbar -->
+                    <a class = "text-nav" href = "imageSearch.html">Images</a>
+                    <a class = "text-nav" href = "#">Advanced</a>
+                    <!-- google waffle here -->
+                    <svg onclick = "toggleDarkMode()" xmlns="http://www.w3.org/2000/svg" width = "48" height = "48"><path id = "toggle" d="M14 36q-5 0-8.5-3.5T2 24q0-5 3.5-8.5T14 12h20q5 0 8.5 3.5T46 24q0 5-3.5 8.5T34 36Zm0-3h20q3.75 0 6.375-2.625T43 24q0-3.75-2.625-6.375T34 15H14q-3.75 0-6.375 2.625T5 24q0 3.75 2.625 6.375T14 33Zm-.05-3.95q2.1 0 3.575-1.475T19 24q0-2.1-1.475-3.575T13.95 18.95q-2.1 0-3.575 1.475T8.9 24q0 2.1 1.475 3.575t3.575 1.475ZM24 24Z"/></svg>
+                    <!-- image graphic here to link to my github. -->
+                    <a href = "https://github.com/cosmicstarshine"><img class = "user-logo" src = "nurseryGraphic.jpg"></a>
+                </nav>
             </div>
-            <div class = "middle-column column">
-                <input class = "large-field field" type = "text" name = "as_q">
-                <input class = "large-field field" type = "text" name = "as_epq">
-                <input class = "large-field field" type = "text" name = "as_oq">
-                <input class ="large-field field"type = "text" name = "as_eq">
-                <div class = "number-range">
-                    <input class = "field" type = "text" name = "as_nlo">
-                    <p>to</p>
-                    <input class = "field" type = "text" name = "as_nhi">
-                </div>
-
-            </div>
-            <h3 class = "grid-subheader hideable">To do this in the search box</h3>
-
-            <!-- Use a media query to hide this. -->
-            <div class = "right-column column hideable">
-                <p class = "field context-field">Type the important words: <span>tri-colour rat terrier</span></p>
-                <p class = "field context-field">Put exact words in quotes: <span>"rat terrier"</span></p>
-                <p class = "field context-field">Type <span>OR</span> between all the words you want <span>miniature OR standard</span></p>
-                <p class = "field context-field">Put a minus sign just before words that you don't want <span>-rodent, -"Jack Russell"</span></p>
-                <p class = "field context-field">Put two full stops between the numbers and add a unit of measurement <span>10..35 kg, $300..$500, 2010..2011</span></p>
-            </div>
-            <input class = "footer button" type = "submit" role = "button" value = "Advanced Search">
-        </div>
-        <!-- All these words: (basic advanced query search) -->        
-        <!-- This exact word/phrase: (exact phrase query) -->
-        <!-- Any of these words: (or query) -->
-        <!-- None of these words: (exclusion query) -->
-        <!-- Numbers ranging from:  -->
+            <header class = "main-header">
+                <header class = "text-logo">
+                    <h2>Not</h2>        
+                    <h1>Google</h1>            
+                </header>
+            </header>
+            <h1 class = "header">Advanced Search</h1>
+            <div class = "break-line"></div>
+            
+            <form action = "https://www.google.com/search" method = "GET" role = "search" name = "f">
+                <div class = "container"> 
+                    <h2 class = grid-header>Find Pages with...</h2>
+               
+                    <div class = "left-column column">
+                        <p class = "field">All of these words:</p>
+                        <p class = "field">This exact word/phrase:</p>
+                        <p class = "field">Any of these words:</p>
+                        <p class = "field">None of these words:</p>
+                        <p class = "field">Numbers Ranging From:</p>
         
+                    </div>
+                    <div class = "middle-column column">
+                        <input class = "large-field field" type = "text" name = "as_q">
+                        <input class = "large-field field" type = "text" name = "as_epq">
+                        <input class = "large-field field" type = "text" name = "as_oq">
+                        <input class ="large-field field"type = "text" name = "as_eq">
+                        <div class = "number-range">
+                            <input class = "field" type = "text" name = "as_nlo">
+                            <p>to</p>
+                            <input class = "field" type = "text" name = "as_nhi">
+                        </div>
+        
+                    </div>
+                    <h3 class = "grid-subheader hideable">To do this in the search box</h3>
+        
+                    <!-- Use a media query to hide this. -->
+                    <div class = "right-column column hideable">
+                        <p class = "field context-field">Type the important words: <span>tri-colour rat terrier</span></p>
+                        <p class = "field context-field">Put exact words in quotes: <span>"rat terrier"</span></p>
+                        <p class = "field context-field">Type <span>OR</span> between all the words you want <span>miniature OR standard</span></p>
+                        <p class = "field context-field">Put a minus sign just before words that you don't want <span>-rodent, -"Jack Russell"</span></p>
+                        <p class = "field context-field">Put two full stops between the numbers and add a unit of measurement <span>10..35 kg, $300..$500, 2010..2011</span></p>
+                    </div>
+                    <input class = "footer button" type = "submit" role = "button" value = "Advanced Search">
+                </div>
+                
+        
+            
+            </form>
+        </div>
+        <div class = "bottom-block">
+            <div class = "time-block"><p id = "time">Time has stopped</p></div>
+            <div class = "date-block"><p id = "date">Time has stopped</p></div>
+        </div>
+    </div>
+    
+    <script src = "main.js"></script>
+</body>
+</html>
+
 
         <!-- Return to this later: This is just tedious input work && not required. >  -->
         <!-- Second div for narrowing: -->
@@ -146,7 +147,4 @@
             <option value role = "menuitem">any region</option>
             <option value = "countryAF" role = "menuitem">Afghanistan</option>
             <option value = "countryAL" role = "menuitem">Albania</option>
-        </select> -->       
-    </form>
-</body>
-</html>
+        </select> -->   

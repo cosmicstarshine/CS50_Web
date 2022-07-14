@@ -1,0 +1,211 @@
+.container{
+    display: grid;
+
+    /* Change from 2 @ 50 to 25% and fr. 
+    Also: add a third column for explanation shit.*/
+    grid-template-columns: [col1-start]1fr[col1-end col2-start]4fr[col2-end col3-start]1fr[col3-end];
+    grid-template-rows: auto;
+    grid-template-areas:
+        "h . sh"
+        "l m r"
+        ". f .";    
+}
+
+.header{
+    margin: 0 2rem 2rem 2rem ;
+    font-kerning: normal;
+    letter-spacing:-0.5px;
+    color: #816797;
+    
+
+    
+    
+}
+.break-line{
+    border-bottom: solid 3px #716F81;
+}
+.grid-header{
+    grid-area:h;
+    margin: 2rem 0 0.5rem 2rem;
+    font-size:1.5rem;
+    font-kerning: normal;
+    letter-spacing:-0.5px;
+    color: #B97A95
+    
+
+
+}
+.grid-subheader{
+    font-size:0.9rem;
+    grid-area: sh;
+    margin: 2.5rem 2rem 0.5rem 2rem;
+    font-kerning: normal;  
+    letter-spacing:-0.5px;    
+  
+
+
+}
+
+/* Figure out some design language for h2 & 3? */
+.column{
+    display:grid;
+    grid-template-rows:repeat(4vh, 5, row-start);
+    place-self:left;
+    
+    
+    /* Consider, if a global font, to just pass here and inherit. */
+}
+.left-column{
+    grid-area: l;
+    margin: 0 0 0 2rem;
+    
+    
+}
+.middle-column{
+    grid-area: m;
+    width: 100%;
+}
+
+.right-column{
+    grid-area: r;
+    margin: 0 1rem 0 2rem;
+
+}
+.number-range{
+    display:flex;
+    flex-wrap: nowrap;
+    justify-content:space-between;
+}
+.number-range input{
+    width:100%;
+}
+.number-range p{
+    
+    place-self:center;    
+    font-size: 1rem;
+    margin: 1rem;
+    font-weight:bold;
+}
+
+.field{
+    height: 2rem;    
+    width: auto;
+    margin:1rem 0 1rem 0;
+    font-size: 0.9rem;
+    font-weight: bold;
+    background-color: #F2E1C1;
+    
+}
+.left-column p {
+    padding-top: 0.8rem;
+}
+.column input{
+    border: solid 3px #F6AE99;
+    outline:none;
+    border-radius:24px;
+    padding-left:1rem;
+}
+
+.footer{
+    grid-area: f;    
+    place-self: end;      
+}
+
+
+
+/* CHANGE THIS FONT. */
+.context-field{
+    font-size: 0.8rem;
+    font-weight:100;
+}
+.context-field span{
+    font-size: 0.9rem;
+    font-family:monospace;
+}
+
+
+
+
+.main-header{
+    width: auto;
+    height: 6rem;
+    margin:2rem;
+}
+
+.main-header .text-logo{
+    width:40%;
+    font-size: 200%;
+    margin: 0 0 0 0;
+    justify-content:left;
+}
+.main-header .text-logo h2{
+    margin:0 0 -0.5rem 0;
+}
+@media only screen and (max-width:1300px){
+    .field{
+        font-size:0.8rem;
+    }
+    .middle-column{
+        width: 90%;
+        margin-left: 1rem;
+    }
+}
+@media only screen and (max-width: 1200px){
+    .hideable{
+        display:none;
+    }
+    .break-line{
+        border-width: 2px;
+    }
+    
+}
+@media only screen and (max-width: 900px){
+    .field{
+        font-weight:100;      
+    }
+    .middle-column{
+        width:80%;
+        margin-left:1rem;
+    }
+    .number-range p{
+        font-size: 0.8rem;
+        font-weight:normal;
+    }
+    .left-column p{
+        padding:0.5rem;
+    }
+}
+
+/* Dark Mode */
+.dark .header{
+    color: #B97A95;
+}
+
+.dark .grid-header, .grid-subheader{
+    color: #816797;
+}
+
+.dark .break-line{
+    border-color:#51557E;
+}
+.dark .field{
+    background-color:#1B2430;
+}
+.dark .column input{
+    border-color:#816797;
+    background-color:#51557E;
+    color: #D6D5A8;
+}
+.dark .column input:-webkit-autofill,
+.dark .column input:-webkit-autofill:hover, 
+.dark .column input:-webkit-autofill:focus,
+.dark .column textarea:-webkit-autofill,
+.dark .column textarea:-webkit-autofill:hover,
+.dark .column textarea:-webkit-autofill:focus,
+.dark .column select:-webkit-autofill,
+.dark .column select:-webkit-autofill:hover,
+.dark .column select:-webkit-autofill:focus {  
+  -webkit-text-fill-color: #D6D5A8;
+  -webkit-box-shadow: 0 0 0px 1000px #51557E inset;
+  transition: background-color 5000s ease-in-out 0s;
+}

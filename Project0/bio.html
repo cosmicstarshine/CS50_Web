@@ -6,25 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me</title>
     <link rel = "stylesheet" href = "main.css">
+    <link rel = "stylesheet" href = "bio.css">
 </head>
-<body>
-    <div class = "navigation">
-        <nav class = "navigation leftNav">
-            <!-- LeftNav Here -->
-            <!-- Back to home here? -->
-            <a href = "index.html">Home</a>
-        </nav>
-        <nav class = "navigation rightNav">
-            <!-- RightNav -->
-            <a href = "imageSearch.html">Images</a>
-            <a href = "advancedSearch.html">Advanced</a>
-        </nav>
+<body id = "mainBody">
+    <div class = "page-container">
+        <div class = "content-wrapper">
+            <div class = "navigation">
+                <nav class = "navigation left-nav">
+                    <!-- LeftNav Here -->
+                    <!-- Back to home here? -->
+                    <a class = "text-nav" href = "index.html">Home</a>
+                </nav>
+                <nav class = "navigation right-nav">
+                    <!-- RightNav -->
+                    <a class = "text-nav" href = "imageSearch.html">Images</a>
+                    <a class = "text-nav" href = "advancedSearch.html">Advanced</a>
+                    <svg onclick = "toggleDarkMode()" xmlns="http://www.w3.org/2000/svg" width = "48" height = "48"><path id = "toggle" d="M14 36q-5 0-8.5-3.5T2 24q0-5 3.5-8.5T14 12h20q5 0 8.5 3.5T46 24q0 5-3.5 8.5T34 36Zm0-3h20q3.75 0 6.375-2.625T43 24q0-3.75-2.625-6.375T34 15H14q-3.75 0-6.375 2.625T5 24q0 3.75 2.625 6.375T14 33Zm-.05-3.95q2.1 0 3.575-1.475T19 24q0-2.1-1.475-3.575T13.95 18.95q-2.1 0-3.575 1.475T8.9 24q0 2.1 1.475 3.575t3.575 1.475ZM24 24Z"/></svg>
+                    <a href = "https://github.com/cosmicstarshine"><img class = "user-logo" src = "nurseryGraphic.jpg"></a>
+                </nav>
+            </div>
+            
+                
+            <div class = "bio-block">
+                <h1>Jordan Clayton</h1>
+                <p>&emsp;&emsp;Hi! My name is Jordan Clayton and I am an aspiring developer (heavy emphasis on aspiring) from Toronto, Canada. I am mostly self-taught, but am due to begin a BSc. in Computer Science this coming Fall at TMU (2022). My background and training are in Fine Art, and I have held an artistic practice for nearly a decade. I am fairly new to web and mobile development, but am eager to continue learning.</p>
+                <p>My spare time is currently devoted to studying in preparation for the fall, but outside of class-work I love to play video games. I am also (slowly) working on a game prototype, which will hopefully be released before I expire.</p>
+                <p>This is my first attempt at front-end development; brace for impact, the road is bumpy.</p>
+                <h2>Project 0: Search</h2>
+                <p>This project is my submission for CS50x's Web Programming with Python and JavaScript. It is a basic (but functional! I hope) front-end for Google Search Queries. To switch between Light and Dark mode, click the toggle in the upper right hand corner.</p>
+            </div>
+        </div>
+        <div class = "bottom-block">
+            <div class = "time-block"><p id = "time">Time has stopped</p></div>
+            <div class = "date-block"><p id = "date">Time has stopped</p></div>
+        </div>
     </div>
     
-        
-    <div>
-        <h1>Jordan Clayton</h1>
-        <p>Brief info block here</p>
-    </div>
+    
+    <script src = "main.js"></script>
 </body>
 </html>

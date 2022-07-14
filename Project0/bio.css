@@ -1,0 +1,22 @@
+.bio-block{
+    width:70%;
+    margin:auto;
+    align-items:stretch;
+    font-weight:bold;
+    position: relative;
+
+}
+
+.bio-block h1{    
+    font-size:400%;
+    color: #B97A95;
+}
+
+.bio-block h2{
+    font-size: 200%;
+    color: #B97A95;
+}
+
+.dark .bio-block h1, .dark .bio-block h2{
+    color: #51557E;
+}
