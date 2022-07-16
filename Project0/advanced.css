@@ -58,6 +58,7 @@
 .middle-column{
     grid-area: m;
     width: 100%;
+    column-span:all;
 }
 
 .right-column{
@@ -135,10 +136,6 @@
     .field{
         font-size:0.8rem;
     }
-    .middle-column{
-        width: 90%;
-        margin-left: 1rem;
-    }
 }
 @media only screen and (max-width: 1200px){
     .hideable{
@@ -153,10 +150,7 @@
     .field{
         font-weight:100;      
     }
-    .middle-column{
-        width:80%;
-        margin-left:1rem;
-    }
+
     .number-range p{
         font-size: 0.8rem;
         font-weight:normal;
