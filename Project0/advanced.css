@@ -103,7 +103,17 @@
 
 .footer{
     grid-area: f;    
-    place-self: end;      
+    place-self: end;
+    margin-bottom: 2rem;     
+}
+
+.footer, .button{
+    background-color: lightblue;
+    color:white;
+}
+.dark footer, .dark .button{
+    background-color: lightblue;
+    color: white;
 }
 
 
